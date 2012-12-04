@@ -1,0 +1,23 @@
+<Group name="Biking" description="My biking friends">
+ <Members>
+  <Member>
+     <name>Albert Tu</name>
+     <id>12345</id>
+     <description>Very awesome</description>
+     <tag></tag>
+     <tag></tag>
+  </Member>
+  <Member>
+     <name>Mihai Peteu</name>
+     <id>12346</id>
+     <description>bad ass</description>
+     <tag></tag>
+  </Member>
+  <Member>
+    <name>Alex Amerri</name>
+    <id>12467</id>
+    <description>unpredictable</description>
+    <tag></tag>
+  </Member>
+ </Members>
+</Group>
