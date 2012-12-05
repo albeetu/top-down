@@ -1,4 +1,4 @@
-require 'rubygems'
+require 'rubygems' 
 
 Class Member
 
@@ -17,10 +17,12 @@ Class Member
    def leave_group(group)
    end
 
-   def initialize(mem_name,mem_description,import)
+   def initialize(mem_name,mem_description,import,mem_id,tags)
       @name = mem_name
       @description = mem_description
       @import = import_member(import)
+      @groups = Array.new
+      @tags = Array.new
    end 
 
 end
