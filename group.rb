@@ -2,7 +2,7 @@ require 'rubygems'
 require 'crack'
 require 'xmlsimple'
 require 'pp'
-
+require 'member.rb'
 class Group
    
    @name = nil
@@ -25,7 +25,7 @@ class Group
        @description = group['description']
        @id = group['id']
        @admins = group['admin']
-       @members = group['Members']
+       @members = process_members(group['Members'])
        return group
        #error handling?
    end
@@ -41,13 +41,20 @@ class Group
    def list_members()
        puts "Hello #{@name}, You are all #{@description}"
        puts "Members are ==========="
-       @members.each{ |mem| 
-	mem.each {|key,value| 
-                     puts value
-         }
-       }
-
+       pp @members
    end
+
+   def process_members(raw_members_list)
+      members = Array.new
+      raw_members_list.each{ |mem|
+               mem.each {|key,value|
+                         value.each{|rec|
+                               members << Member.new(nil,nil,nil,nil,nil,rec)} 
+                        }
+      }
+      return members
+   end
+
 
    def is_member(member)
       #if member is in group then return true

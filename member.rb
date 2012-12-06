@@ -1,6 +1,6 @@
 require 'rubygems'
 
-Class Member
+class Member
 
    def set_description(description)
    end
@@ -17,10 +17,26 @@ Class Member
    def leave_group(group)
    end
 
-   def initialize(mem_name,mem_description,import)
+   def import_member(raw_member)
+   ## tag - Array
+   ## description - String
+   ## id - number
+   ## name - STring
+   ## status - string
+      @tags = raw_member["tag"]
+      @name = raw_member["name"]
+      @description = raw_member["description"]
+      @id = raw_member["id"]
+      @status = raw_member["status"]
+   end
+
+   def initialize(id,mem_name,mem_description,tags,status,import)
+      @tags = Array.new()
       @name = mem_name
       @description = mem_description
-      @import = import_member(import)
+      @status = status
+      @id = id
+      import_member(import)
    end 
 
 end
