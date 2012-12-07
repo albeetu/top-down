@@ -3,6 +3,7 @@ require 'crack'
 require 'xmlsimple'
 require 'pp'
 require 'member.rb'
+
 class Group
    
    @name = nil
@@ -24,9 +25,10 @@ class Group
        @name = group['name']
        @description = group['description']
        @id = group['id']
-       @admins = group['admin']
-       @members = process_members(group['Members'])
-       return group
+       @admins = group['Admin']
+       @members = group['Member']
+       pp @members
+       pp @admins
        #error handling?
    end
 
@@ -44,20 +46,9 @@ class Group
        pp @members
    end
 
-   def process_members(raw_members_list)
-      members = Array.new
-      raw_members_list.each{ |mem|
-               mem.each {|key,value|
-                         value.each{|rec|
-                               members << Member.new(nil,nil,nil,nil,nil,rec)} 
-                        }
-      }
-      return members
-   end
-
-
    def is_member(member)
       #if member is in group then return true
+      return 
    end
 
    def is_admin(member)

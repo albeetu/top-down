@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'group.rb'
-
+require 'ruby-debug'
 #puts group_config
 #puts Crack::XML.parse(group_config).inspect
 
@@ -11,4 +11,4 @@ topdown.list_admin()
 topdown.is_admin("Albert Tu")
 topdown.is_admin("Mihai")
 topdown.is_admin("Hello Kitty")
-
+debugger

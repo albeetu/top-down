@@ -15,6 +15,7 @@ class Member
    end
 
    def leave_group(group)
+       @status = "leaving"
    end
 
    def import_member(raw_member)

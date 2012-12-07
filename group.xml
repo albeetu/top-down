@@ -1,23 +1,15 @@
-<Group name="Biking" description="My biking friends" admin="Albert Tu" id="1">
- <Members>
-  <Member status="current">
-     <name>Albert Tu</name>
-     <id>12345</id>
-     <description>Very awesome</description>
+<Group name="Biking" description="My biking friends" id="1">
+ <Admin>Albert Tu</Admin>
+ <Admin>Jim Jones</Admin>
+ <Member status="current" name="Albert Tu" id="12345" description="Very awesome">
      <tag></tag>
      <tag></tag>
   </Member>
-  <Member status="pending">
-     <name>Mihai Peteu</name>
-     <id>12346</id>
-     <description>bad ass</description>
+  <Admin>cockblock</Admin>
+  <Member status="pending" name="Mihai Peteu" id="12346" description="bad ass">
      <tag></tag>
   </Member>
-  <Member status="unsubscribed">
-    <name>Alex Amerri</name>
-    <id>12467</id>
-    <description>unpredictable</description>
+  <Member status="unsubscribed" name="Alex Amerri" id="12467">
     <tag></tag>
   </Member>
- </Members>
 </Group>
