@@ -30,14 +30,21 @@ class Member
       @id = raw_member["id"]
       @status = raw_member["status"]
    end
-
-   def initialize(id,mem_name,mem_description,tags,status,import)
-      @tags = Array.new()
-      @name = mem_name
-      @description = mem_description
+   
+   def print()
+      puts "Member info"
+      puts "Name:  #{@name}"
+      puts "Descr: #{@description}"
+      puts "ID:    #{@id}"
+      puts "Status:#{@status}"
+   end
+   
+   def initialize(id,name,description,tags,status,import)
+      @tags = tags
+      @name = name
+      @description = description
       @status = status
       @id = id
-      import_member(import)
    end 
 
 end
